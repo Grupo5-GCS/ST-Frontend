@@ -1,0 +1,44 @@
+.imagen3 {
+    /* background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/andrea-de-santis.jpg'); */
+    background-image: url('../../../assets/img/login.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    width: 73vh;
+}
+
+.fondoIniciarSesion {
+    background: #0075E0;
+}
+
+.btn-outline-primary:hover {
+    background-color: #e2b393;
+    border-color: transparent;
+    color: white !important;
+}
+
+.btn-outline-primary {
+    border-color: black;
+    border-width: 2px;
+    color: black!important;
+}
+
+.btn {
+    border-width: 3px;
+    font-size: 25px;
+}
+
+.eye {
+    margin-top: -65px;
+}
+
+hr {
+    margin-left: 50px;
+    border-color: black;
+}
+
+span {
+    margin-left: 160px;
+    margin-right: 160px;
+}
