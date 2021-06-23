@@ -1,0 +1,30 @@
+.imagen2 {
+    /* background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/andrea-de-santis.jpg'); */
+    background-image: url('../../../../assets/img/cue.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 120vh;
+    width: 70vh;
+}
+
+.fondoCrearCuenta {
+    background: #FF8F47;
+}
+
+.btn-outline-primary:hover {
+    background-color: #e2b393;
+    border-color: transparent;
+    color: white !important;
+}
+
+.btn-outline-primary {
+    border-color: black;
+    border-width: 2px;
+    color: black!important;
+}
+
+.btn {
+    border-width: 3px;
+    font-size: 25px;
+}
