@@ -1,0 +1,58 @@
+.hotel{
+    background: radial-gradient(ellipse, aqua, white);
+}
+
+.restaurante{
+    background: radial-gradient(ellipse, rgb(255, 136, 0), white);
+}
+.hotelcard{
+    padding: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 50px;
+    background-position: center center;
+    border: 4px solid white;
+    background-color: white;
+    color:aqua;
+}
+.contenedor {
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+    
+}
+.tres-culumnas{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 2rem;
+}
+
+.entrada-blog a {
+    display: inline-block;
+    background-color: #2196F3;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+/** CODIGO AQUI **/
+@media (min-width: 768px) {
+    .tres-columnas {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 2rem;
+    }
+}
+img {
+    max-width: 100%;
+    height: 300px;
+    width: 350px;
+}
+h2{
+    text-align: center;
+}
+article{
+    background-position: center center;
+    border: 1px solid black;
+    background: radial-gradient(ellipse, rgb(133, 128, 128), white);
+}
