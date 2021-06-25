@@ -1,16 +1,14 @@
-:root {
-    --color-azul: #0075e0;
-    --color-amarillo: #ff8f47;
-    --color-navbar: #f1f1f1;
-    --color-negro: #000000;
-}
+$color-azul: #0075e0;
+$color-amarillo: #ff8f47;
+$color-navbar: #f1f1f1;
+$color-negro: #000000;
 
 body {
     font-family: 'Poppins', sans-serif !important;
 }
 
 .navbar {
-    background-color: var(--color-navbar);
+    background-color: $color-navbar;
 }
 #navegacion {
     height: 100%;
@@ -20,15 +18,15 @@ body {
     font-weight: bold;
 }
 .navbar-brand > h1{
-    color: var(--color-azul);
+    color:$color-azul;
 }
-h1> spam{
-    color: var(--color-amarillo);
+h1> span{
+    color: $color-amarillo;
 }
 
 .navbar-nav {
     font-size: 20px;
-    color: var(--color-negro);
+    color: $color-negro;
 }
 
 .btn{
