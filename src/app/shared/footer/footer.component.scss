@@ -1,0 +1,114 @@
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+body{
+    background: rgb(121, 164, 204);
+}
+
+/*Footer*/
+.footer{
+
+    position: absolute;
+    width: 1348px;
+    height: 320px;
+    left: 0px;
+    top: 1020px;
+    background: #242424;
+}
+
+/*Contenedor del título del Footer*/
+.titulo-footer{
+    position: absolute;
+    width: 840px;
+    height: 170px;
+    left: 300px;
+    top: 20px;
+    text-align: center;
+    color: #FF8F47;
+    font-family: "ARIAL", serif;
+    
+}
+
+/*Contenedor de los iconos*/
+.iconos{
+    position: absolute;
+    width: 840px;
+    height: 90px;
+    left: 270px;
+    top: 80px;
+    text-align: center;
+    
+}
+
+/*Linea divisoria del Footer*/
+.linea{
+    position: absolute;
+    width: 1000px;
+    height: 2.5px;
+    left: 160px;
+    top: 190px;
+    text-align: center;
+    background: #FF8F47;
+   
+
+}
+
+/*Texto del footer*/
+.text-footer{
+    color: #0075E0;
+    margin-left: 160px;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    
+}
+
+/*Quitar subrayado a los textos del footer*/
+.f_text{
+    text-decoration: none;
+}
+.f_text:hover{
+    color: #FF8F47;
+}
+
+
+/*Iconos de las redes sociales*/
+.redes-sociales{
+    color: #0075E0;
+    
+}
+/*color para los iconos*/
+a{
+    color: #0075E0;
+}
+
+
+/*Margen entre iconos*/
+.margen{
+    margin-left: 70px;
+}
+
+/*Safe*/
+.safe{
+    font-size:35px; 
+    font-weight: bold;
+    color: #0075E0;
+}
+
+/*Travel*/
+.travel{
+    font-size:35px; 
+    font-weight: bold;
+    color: #FF8F47;
+}
+
+/*Texto debajo de la línea*/
+.l_debajo{
+    position: absolute;
+    width: 1000px;
+    left: 160px;
+    top: 215px;
+    text-align: center;
+}
