@@ -1,6 +1,10 @@
 .main-body {
-    margin: 0px;
-    padding: 0px;
+    .row {
+        margin-right: 0px !important;
+    }
+    .col {
+        padding-right: 0px !important;
+    }
 }
 .body {
     min-height: 100vh;
