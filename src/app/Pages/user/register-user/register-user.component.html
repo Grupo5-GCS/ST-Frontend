@@ -1,0 +1,108 @@
+<!-- CREAR CUENTA USUARIO -->
+<section class="animated fadeIn">
+    <div class="imgBx">
+        <img src="../../../../assets/images/Rectangle30.jpg" alt="Rectangle30.jgp">
+    </div>
+    <div class="contentBx" style="background-color: #FF8F47;">
+        <div class="formBx">
+            <div class="title">
+                <h2>Registro</h2>
+            </div>
+            <form>
+                <div class="inputBx">
+                    <span>Tipo de usuario</span>
+                    <select name="type-user">
+                        <option disabled selected>Tipo de usuario</option>
+                        <option value="Organizacion" onclick="cambio()">Organización</option>
+                        <option value="Turista">Turista</option>
+                    </select>
+                </div>
+                <h5>Datos Personales</h5>
+                <div class="inputBx">
+                    <span>Nombres</span>
+                    <input type="text">
+                </div>
+                <div class="inputBx">
+                    <span>Apellido paterno</span>
+                    <input type="text">
+                </div>
+                <div class="inputBx">
+                    <span>Apellido materno</span>
+                    <input type="text">
+                </div>
+                <div class="inputBx">
+                    <span>Fecha de nacimiento</span>
+                    <input type="date">
+                </div>
+                <div class="inputBx">
+                    <span>DNI</span>
+                    <input type="text">
+                </div>
+                <div class="inputBx">
+                    <span>Género</span>
+                    <div>
+                        <label for="m"> Masculino</label>
+                        <input id="m" type="radio" name="genero">
+                    </div>
+                    <div>
+                        <label for="f"> Femenino</label>
+                        <input id="f" type="radio" name="genero">
+                    </div>
+                </div>
+                <div class="inputBx">
+                    <span>Usuario</span>
+                    <input type="text">
+                </div>
+                <div class="inputBx">
+                    <span>Password</span>
+                    <input type="password">
+                </div>
+                <div class="inputBx">
+                    <span>Email</span>
+                    <input type="email">
+                </div>
+                <div class="inputBx">
+                    <span>Celular</span>
+                    <input type="text">
+                </div>
+
+                <div class="inputBx">
+                    <input type="submit" value="Crear cuenta">
+                    <p>Tienes cuenta en SafeTravel?<a href=""> Iniciar sesión</a> </p>
+                </div>
+
+                <div id="dataOrganization">
+                    <div class="inputBx">
+                        <span>Razón social</span>
+                        <input type="text">
+                    </div>
+                    <div class="inputBx">
+                        <span>RUC</span>
+                        <input type="text">
+                    </div>
+                    <div class="inputBx">
+                        <span>Dirección</span>
+                        <input type="text">
+                    </div>
+                    <div class="inputBx">
+                        <span>Teléfono</span>
+                        <input type="text">
+                    </div>
+                    <div class="inputBx">
+                        <span>Responsable de pago</span>
+                        <input type="text">
+                    </div>
+                    <div class="inputBx">
+                        <span>Celular del responsable de pago</span>
+                        <input type="text">
+                    </div>
+                    <div class="inputBx">
+                        <span>Correo del responsable de pago</span>
+                        <input type="text">
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</section>

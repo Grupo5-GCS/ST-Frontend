@@ -11,36 +11,36 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item active ml-4 pt-4">
-                    <a class="nav-link"[routerLink]="['/']">Inicio <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" [routerLink]="['/']">Inicio <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item dropdown ml-4 pt-4">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Lugares
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" [routerLink]="['/pr/hoteles']">Hoteles</a>
-                    <a class="dropdown-item" [routerLink]="['/pr/restaurantes']">Restaurantes</a>
-                    <a class="dropdown-item" [routerLink]="['/']">En construccion...</a>
+                        <a class="dropdown-item" [routerLink]="['/pr/hoteles']">Hoteles</a>
+                        <a class="dropdown-item" [routerLink]="['/pr/restaurantes']">Restaurantes</a>
+                        <a class="dropdown-item" [routerLink]="['/']">En construccion...</a>
                     </div>
                 </li>
                 <li class="nav-item ml-4 pt-4">
-                    <a [routerLink]="['/about']" class="nav-link" >Nosotros</a>
+                    <a [routerLink]="['/about']" class="nav-link">Nosotros</a>
                 </li>
                 <li class="nav-item ml-4 pt-4">
-                    <a class="nav-link" >Contacto</a>
+                    <a class="nav-link">Contacto</a>
                 </li>
-               
+
                 <li>
                     <div id="btnLR">
                         <form class="form-inline my-2 my-lg-0">
                             <button [routerLink]="['/log']" id="btnLogin" class="btn btn-primary my-2 my-sm-0 ml-4" type="button">Iniciar Sesion</button>
-                            <button [routerLink]="['/us/register']" id="btnRegister" class="btn btn-warning my-2 my-sm-0 ml-2" type="button">Registrarse</button>
+                            <button [routerLink]="['/us/register-user']" id="btnRegister" class="btn btn-warning my-2 my-sm-0 ml-2" type="button">Registrarse</button>
                         </form>
-                    
+
                     </div>
                 </li>
             </ul>
-            
+
         </div>
     </div>
 </nav>

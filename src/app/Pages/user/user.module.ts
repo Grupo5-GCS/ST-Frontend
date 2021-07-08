@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { UserRoutingModule } from './user-routing.module';
 import { RecoverPasswordComponent } from './recover-password/recover-password.component';
+import { RegisterUserComponent } from './register-user/register-user.component';
 
 
 @NgModule({
   declarations: [
-    RecoverPasswordComponent
+    RecoverPasswordComponent,
+    RegisterUserComponent
   ],
   imports: [
     CommonModule,
