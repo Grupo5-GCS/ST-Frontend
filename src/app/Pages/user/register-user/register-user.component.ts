@@ -6,14 +6,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./register-user.component.scss']
 })
 export class RegisterUserComponent implements OnInit {
+  organizationData = false;
 
-  constructor() { }
-
+  constructor() { 
+  }
+  
+  
   ngOnInit(): void {
+    document.getElementById('dataOrganization')?.classList.add('notShow'); 
   }
 
-  cambio(){
-    console.log('vamso');
+  cambio(value: any){
+    if (value == 'Organizacion') {
+      document.getElementById('dataOrganization')?.classList.remove('notShow'); 
+      this.organizationData = true;
+    }else{
+      document.getElementById('dataOrganization')?.classList.add('notShow'); 
+      this.organizationData = false;
+    }
   }
 
 }
