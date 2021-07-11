@@ -13,6 +13,7 @@ export class AuthService {
   private _token: any;
 
   credentials = btoa('safetravel' + ':' + 'fivesolutions');
+  //credentials = btoa('tallerProject' + ':' + 'taller'); // Heroku
 
   urlEndpoint: string = `${this.urlProvider.url + '/oauth/token'}`;
   
