@@ -77,6 +77,7 @@
         background: transparent;
         border-radius: 30px;
         width: 50%;
+        border: 2px solid #373838;
         outline: none;
     }
     
@@ -95,7 +96,7 @@
     }
     
     section .contentBx .formBx .inputBx span {
-        font-size: 13px;
+        font-size: 16px;
         margin-bottom: 5px;
         color: #000;
         font-weight: 400;
@@ -108,7 +109,7 @@
         outline: none;
         font-weight: 400;
         font-size: 14px;
-        border: 1px solid #5e6061;
+        border: 2px solid #373838;
         letter-spacing: 1px;
         color: #000;
         background: transparent;
@@ -139,7 +140,6 @@
         color: #e91e63;
         text-decoration: none;
     }
-    /* max 835px */
     
     @media (max-width:928px) {
         section .imgBx {
@@ -160,7 +160,7 @@
         }
         section .contentBx .formBx {
             width: 100%;
-            background: rgb(255 255 255 / 80%);
+            background: rgb(255 143 71 / 80%);
             padding: 40px;
             margin: 50px;
         }
