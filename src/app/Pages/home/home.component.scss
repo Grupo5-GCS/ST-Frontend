@@ -1,9 +1,13 @@
 .hotel{
-    background: radial-gradient(ellipse, aqua, white);
+    // background: radial-gradient(ellipse, aqua, white);
+    background: rgb(162,201,239);
+    background: linear-gradient(90deg, rgba(162,201,239,1) 5%, rgba(255,255,255,1) 98%);
 }
 
 .restaurante{
-    background: radial-gradient(ellipse, rgb(255, 136, 0), white);
+    // background: radial-gradient(ellipse, rgb(255, 136, 0), white);
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 5%, rgba(250,219,193,1) 98%);
 }
 .hotelcard{
     padding: 5px;
@@ -11,9 +15,24 @@
     padding-right: 50px;
     margin: 50px;
     background-position: center center;
-    border: 4px solid white;
+    // border: 4px solid white;
     background-color: white;
-    color:aqua;
+    border-radius: 7px;
+    color:#0075e0;
+    font-size: 30px;
+}
+
+.restaurantecard{
+    padding: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 50px;
+    background-position: center center;
+    // border: 4px solid white;
+    background-color: white;
+    border-radius: 7px;
+    color:#ff8f47;
+    font-size: 30px;
 }
 .contenedor {
     max-width: 1200px;
@@ -21,10 +40,23 @@
     margin: 0 auto;
 
 }
-.tres-culumnas{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    column-gap: 2rem;
+// .tres-culumnas{
+//     display: grid;
+//     grid-template-columns: repeat(3,1fr);
+//     column-gap: 2rem;
+// }
+
+// cards
+.card {
+    border-radius: 15px;
+}
+
+.card img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.card-title{
+    text-align: center;
 }
 
 .entrada-blog a {
@@ -33,7 +65,7 @@
     color: white;
     padding: 10px 20px;
     text-decoration: none;
-    font-weight: bold;
+    // font-weight: bold;
 }
 /** CODIGO AQUI **/
 @media (min-width: 768px) {
