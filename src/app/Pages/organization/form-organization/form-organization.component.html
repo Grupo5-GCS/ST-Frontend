@@ -1,82 +1,195 @@
-<!-- CREAR CUENTA ORGANIZACION -->
-<div class="row justify-content-md-center">
+<div class="tituloOrganizacion">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3 col-md-3 "></div>
+            <div class="col-6 col-md-6 text-center">
+                <h2 class="tituloOrga">Mi Organización</h2>
+            </div>
+            <div class="col-3 col-md-3 text-center"><button class="btn btn-success" data-toggle="modal"
+                    data-target="#ventanaModal"> <i class="fas fa-plus"></i> Agregar Organización</button></div>
 
-    <div class="col-md-5 justify-content-md-end">
-        <div class="imagen2"></div>
+        </div>
+
     </div>
+</div>
 
-
-    <div class="col-md-5 fondoCrearCuenta justify-content-md-center">
-
-        <div class="input-group justify-content-md-center mt-5">
-            <h2>Crear nueva cuenta</h2>
-        </div>
-        <hr size="5px" width="80%">
-
-        <div class="justify-content-md-center m-4 mt-5">
-            <div class="form-group">
-                <input type="text " class="form-control mt-3 " placeholder="Nombre" style="border-radius: 20px; border: none;">
+<!--MOSTRAR N° DE FILAS Y BUSCAR-->
+<div class="headerTabla">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3 col-md-3  col-md-3 col-lg mostrar">
+                <h5>Mostrar # filas</h5>
             </div>
-        </div>
+            <div class="col-6 col-md-6 col-md-6 col-lg">
 
-        <div class="justify-content-md-center m-4 mt-3">
-            <div class="form-group">
-                <input type="text " class="form-control mt-3 " placeholder="Razón social" style="border-radius: 20px; border: none;">
             </div>
-        </div>
-
-        <div class="justify-content-md-center m-4 mt-3">
-            <div class="form-group" style="display: flex">
-                <input type="text" class="form-control" placeholder="Celular" style="margin-right: 10px; border-radius: 20px; border: none;">
-                <input type="text" class="form-control" placeholder="Teléfono" style="border-radius: 20px; border: none;">
-            </div>
-        </div>
-
-        <div class="justify-content-md-center m-4 mt-3">
-            <div class="form-group" style="display: flex">
-                <input type="text" class="form-control" placeholder="Departamento" style="margin-right: 10px; border-radius: 20px; border: none;">
-                <input type="text" class="form-control" placeholder="Provincia" style="margin-right: 10px; border-radius: 20px; border: none;">
-                <input type="text" class="form-control" placeholder="Distrito" style="border-radius: 20px; border: none;">
-            </div>
-        </div>
-
-        <div class="justify-content-md-center m-4">
-            <div class="form-group">
-                <input type="text " class="form-control mt-3" placeholder="Dirección" style="border-radius: 20px; border: none;">
-            </div>
-        </div>
-
-        <div class="justify-content-md-center m-4">
-            <div class="form-group">
-                <input type="text" class="form-control mt-3" placeholder="Descripción corta" style="border-radius: 20px; border: none;">
-            </div>
-        </div>
-
-        <div class="justify-content-md-center m-4 mt-3">
-            <div class="form-group" style="display: flex; align-items: baseline; justify-content: center;">
-                <label style="font-size: 17px; font-family: sans-serif; margin-right: 20px;">Imagen&nbsp;</label>
-                <input type="file" class="form-control mt-3" style="border-radius: 20px;">
-            </div>
-        </div>
-        <div class="justify-content-md-center m-4">
-            <div class="form-group text-center">
-                <label style="font-size: 17px; font-family: sans-serif; margin-right: 20px; margin-bottom: 10px;">Descripción larga&nbsp;</label>
-                <textarea cols="60" rows="5" class="form-control" style="border-radius: 20px; border-color: transparent; border: none;"></textarea>
-            </div>
-        </div>
-
-        <div class="m-4">
-            <div class="input-group justify-content-md-end form-group">
-                <p>¿Ya tienes una cuena? &nbsp;<a href="#" style="text-decoration:none; color:black;"><b>Inicia Sesión</b></a></p>
-            </div>
-        </div>
-
-        <div class="text-center mt-3 mb-5">
-            <div class="mt-6">
-                <button type="button " class="btn btn-outline-primary">
-                    <span class="badge rounded-pill text-dark">Crear cuenta</span>
-                </button>
+            <div class="inputHeaderTabla">
+                <div class="col-3 col-md-3 col-md-3 col-lg">
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+
+<!-- TABLA -->
+<div class="tablaOrganizacion">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col-12 ">ID</th>
+                <th scope="col-12 ">Empresa</th>
+                <th scope="col-12 ">Categoria</th>
+                <th scope="col-12 ">Ubicacion</th>
+                <th scope="col-12 ">Gerente</th>
+                <th scope="col-12 ">Telefono</th>
+                <th scope="col-12 ">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>10005017</td>
+                <td>Hotel Marriot</td>
+                <td>Hoteles</td>
+                <td>Lima</td>
+                <td>Isrrael Arellano</td>
+                <td>934465839</td>
+                <td>Acciones</td>
+            </tr>
+            <tr>
+                <td>10005018</td>
+                <td>Hotel Palace</td>
+                <td>Hoteles</td>
+                <td>San Isidro</td>
+                <td>Andrea G.P</td>
+                <td>936859473</td>
+                <td>Acciones</td>
+            </tr>
+            <tr>
+                <td>10005019</td>
+                <td>Hotel Sheraton</td>
+                <td>Hoteles</td>
+                <td>Lima</td>
+                <td>Eliana Paris</td>
+                <td>963524184</td>
+                <td>Acciones</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!--PAGINACIÓN-->
+<div class="tituloPaginacion">
+    <nav aria-label="page">
+        <ul class="pagination">
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                    <span class="sr-only">Previous</span>
+                </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<!--VENTANA MODAL-->
+<div class="hola">
+
+
+    <div class="modal fade " id="ventanaModal" tabindex="-1" role="dialog" aria-labelledby="tituloVentana"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content vModal">
+                <!-- Encabezado del Modal -->
+                <div class="modal-header">
+                    <h5 id="tituloVentana" class="titulo-modal">Nueva Organización</h5>
+                    <button class="close" data-dismiss="modal" aria-label="Cerrar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <!-- Cuerpo del modal-->
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group row">
+                            <label for="inputEmail3" class="col-sm-2 col-form-label">Organización</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputEmail3" placeholder="Organización">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputEmail3" class="col-sm-2 col-form-label">RUC</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="inputEmail3" placeholder="RUC">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputEmail3" class="col-sm-2 col-form-label">Ubicación</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="inputEmail3" placeholder="Ubicación">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputEmail3" class="col-sm-2 col-form-label">Gerente</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="inputEmail3" placeholder="Gerente">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="inputEmail3" class="col-sm-2 col-form-label">Teléfono</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="inputEmail3" placeholder="Teléfono">
+                            </div>
+                        </div>
+
+                        <fieldset class="form-group">
+                            <div class="row">
+                                <legend class="col-form-label col-sm-2 pt-0">Categoría: </legend>
+                                <div class="col-sm-10">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
+                                            value="option1" checked>
+                                        <label class="form-check-label" for="gridRadios1">
+                                            Hotel
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
+                                            value="option2">
+                                        <label class="form-check-label" for="gridRadios2">
+                                            Restaurante
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+
+
+                    </form>
+                </div>
+
+                <!-- Pie de pagina del modal -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success"><i class="fas fa-check"></i> Agregar</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fas fa-times"></i>
+                        Cancelar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Fin Cuerpo del modal-->
