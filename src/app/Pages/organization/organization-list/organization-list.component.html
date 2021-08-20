@@ -1,13 +1,12 @@
 <!--LISTA DE ORGANIZACIONES-->
-<div class="tituloOrganizacion">
+<div class="tituloOrganizacion animated fadeIn">
     <div class="container-fluid">
         <div class="row">
             <div class="col-3 col-md-3 "></div>
             <div class="col-6 col-md-6 text-center">
                 <h2 class="tituloOrga">Mi Organización</h2>
             </div>
-            <div class="col-3 col-md-3 text-center"><button class="btn btn-success" data-toggle="modal"
-                    data-target="#ventanaModal"> <i class="fas fa-plus"></i> Agregar Organización</button></div>
+            <div class="col-3 col-md-3 text-center"><button class="btn btn-success" (click)="openModal()"> <i class="fas fa-plus"></i> Agregar Organización</button></div>
 
         </div>
 
@@ -15,7 +14,7 @@
 </div>
 
 <!--MOSTRAR N° DE FILAS Y BUSCAR-->
-<div class="headerTabla">
+<div class="headerTabla animated fadeIn">
     <div class="container-fluid">
         <div class="row">
             <div class="col-3 col-md-3  col-md-3 col-lg mostrar">
@@ -38,7 +37,7 @@
 
 
 <!-- TABLA -->
-<div class="tablaOrganizacion">
+<div class="tablaOrganizacion animated fadeIn">
     <table class="table table-bordered">
         <thead>
             <tr>

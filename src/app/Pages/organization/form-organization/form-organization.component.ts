@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { OrganizationBean } from 'src/app/Beans/OrganizationBean';
 
 @Component({
   selector: 'app-form-organization',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormOrganizationComponent implements OnInit {
 
-  constructor() { }
+  @Input() organizationBean: OrganizationBean;
+
+  constructor(
+    public activeModal: NgbActiveModal
+  ) { }
 
   ngOnInit(): void {
   }
