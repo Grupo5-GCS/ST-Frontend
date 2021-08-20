@@ -1,1 +1,72 @@
-<p>form-product works!</p>
+<div class="modal fade" id="ventanaModal" tabindex="-1" role="dialog" aria-labelledby="tituloVentana" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content vModal">
+            <!-- Encabezado del Modal -->
+            <div class="modal-header">
+                <h5 id="tituloVentana" class="titulo-modal">Nueva organizacion</h5>
+                <button class="close" data-dismiss="modal" aria-label="Cerrar">
+                    <span aria-hidden="true" >&times;</span>
+                </button>
+            </div>
+            <!-- Cuerpo del modal-->
+            <div class="modal-body">
+                <form>
+                    <fieldset class="form-group">
+                        <div class="row">
+                            <legend class="col-form-label col-sm-2 pt-0">Categoría: </legend>
+                            <div class="col-sm-10">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
+                                        value="option1" checked>
+                                    <label class="form-check-label" for="gridRadios1">
+                                        Hotel
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
+                                        value="option2">
+                                    <label class="form-check-label" for="gridRadios2">
+                                        Restaurante
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-2 col-form-label">Organizacion</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" id="inputEmail3" placeholder="Organizacion">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-2 col-form-label">Ubicacion</label>
+                        <div class="col-sm-10">
+                          <input type="email" class="form-control" id="inputEmail3" placeholder="Ubicacion">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <!-- <label for="exampleFormControlTextarea1">Example textarea</label> -->
+                        <label for="inputEmail3" class="col-sm-2 col-form-label">Descripcion</label>
+                        <div class="col-sm-10">
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                    </div>
+                   
+    
+                </form>
+            </div>
+            <!-- Pie de pagina del modal -->
+            <div class="modal-footer">
+                <div class="form-group row ">
+                    <div class="col-sm-6 ">
+                        <button type="button" class="btn btn-success">Agregar</button>
+                    </div>
+                    <div class="col-sm-6">
+                        <button type="button" data-dismiss="modal" class="btn btn-danger">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
