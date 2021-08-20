@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: 'home', loadChildren: () => import('./Pages/home/home.module').then(m=> m.HomeModule) },
   { path: 'org', loadChildren: () => import('./Pages/organization/organization.module').then(m => m.OrganizationModule) },
   { path: 'about', loadChildren: () => import('./Pages/about/about.module').then(m => m.AboutModule) },
+  { path: 'contact', loadChildren: () => import('./Pages/contact/contact.module').then(m => m.ContactModule) },
   { path: '**', redirectTo: 'home' }
 ];
 
