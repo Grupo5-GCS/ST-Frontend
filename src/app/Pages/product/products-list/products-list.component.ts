@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { FormProductComponent } from '../form-product/form-product.component';
 
 @Component({
   selector: 'app-products-list',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductsListComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private modalService: NgbModal
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  public openModal() {
+    const modalRef = this.modalService.open(FormProductComponent);
   }
 
 }
