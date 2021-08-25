@@ -130,14 +130,14 @@ export class RegisterUserComponent implements OnInit {
         this.organization.responsablePaymentPhone = formRegister.value.responsablePaymentPhone,
         this.organization.responsablePaymentEmail = formRegister.value.responsablePaymentEmail
 
-        this.sharedService.sendData('/oc/so', this.organization, true)
+        this.sharedService.sendOrRecieveData('/oc/so', this.organization, true)
         .subscribe(resp => {
           let organizationId = resp.data.id;
           this.user.organizationId = organizationId;
         });
       }
       setTimeout(() => {
-        this.sharedService.sendData('/uc/su', this.user, true)
+        this.sharedService.sendOrRecieveData('/uc/su', this.user, true)
           .subscribe(resp => {
             swal.fire(
               'Se ha registrado correctamente!',

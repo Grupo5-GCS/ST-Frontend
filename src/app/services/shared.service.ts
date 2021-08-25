@@ -34,7 +34,7 @@ export class SharedService {
     return httpHeadersToFile;
   }
 
-  public sendData(path: string, bean: any, isPublic: boolean) {
+  public sendOrRecieveData(path: string, bean: any, isPublic: boolean) {
     let data = {
       data: bean
     }
@@ -52,6 +52,12 @@ export class SharedService {
     const productBlob = new Blob([JSON.stringify(bean)], { type: 'application/json' });
     formData.append(nameStandar, productBlob);
     return this.http.post<any>(`${this.urlProvider.url + path}`, formData, {headers: this.addAtuhorizationHeaderToFile()});
+  }
+
+  public getImageById(path: string, id: number) {
+    return this.http.post<any>(`${this.urlProvider.url + path + '/' + id}`, {
+      responseType: 'blob'
+    });
   }
 
 }

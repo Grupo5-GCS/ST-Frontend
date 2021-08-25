@@ -46,11 +46,10 @@
 
                 <li *ngIf="this.authService.hasRole('Administrador - Organizacion')" class="nav-item dropdown ml-4 pt-4">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Lugares
+                    Administrador Organización
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" [routerLink]="['/pr/hoteles']">Mi Organizacion</a>
-                        <a class="dropdown-item" [routerLink]="['/pr/restaurantes']">Mis Empresas</a>
+                        <a class="dropdown-item" [routerLink]="['/pr/list']">Mis Empresas</a>
                     </div>
                 </li>
 
