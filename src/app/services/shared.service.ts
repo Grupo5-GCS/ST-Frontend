@@ -34,7 +34,7 @@ export class SharedService {
     return httpHeadersToFile;
   }
 
-  public sendData(path: string, bean: any, isPublic: boolean) {
+  public sendOrRecieveData(path: string, bean: any, isPublic: boolean) {
     let data = {
       data: bean
     }
