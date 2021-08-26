@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -15,7 +16,8 @@ import { FormOrganizationComponent } from './form-organization/form-organization
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    OrganizationRoutingModule
+    OrganizationRoutingModule,
+    NgbModule
   ]
 })
 export class OrganizationModule { }

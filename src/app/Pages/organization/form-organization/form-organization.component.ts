@@ -38,7 +38,7 @@ export class FormOrganizationComponent implements OnInit {
 
   public save(formRegisterOrganization: any){
     if(formRegisterOrganization.valid){
-      this.organization.name = formRegisterOrganization.value.name;
+      this.organization.name = formRegisterOrganization.value.nameOrganization;
       this.organization.ruc = formRegisterOrganization.value.ruc;
       this.organization.direction = formRegisterOrganization.value.direction;
       this.organization.phone = formRegisterOrganization.value.phone;
