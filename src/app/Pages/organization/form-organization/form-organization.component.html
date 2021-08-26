@@ -7,7 +7,8 @@
             <div class="modal-content vModal">
                 <!-- Encabezado del Modal -->
                 <div class="modal-header">
-                    <h5 id="tituloVentana" class="titulo-modal">Nueva Organización</h5>
+                    <h5 *ngIf="!edit" id="tituloVentana" class="titulo-modal">Nueva Organización</h5>
+                    <h5 *ngIf="edit" id="tituloVentana" class="titulo-modal">Editar Organización</h5>
                     <button class="close" (click)="activeModal.close('Close click')" aria-label="Cerrar">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -61,7 +62,8 @@
 
                         <!-- Pie de pagina del modal -->
                         <div class="modal-footer">
-                            <button type="submit" class="btn btn-success"><i class="fas fa-check"></i> Agregar</button>
+                            <button *ngIf="!edit" type="submit" class="btn btn-success"><i class="fas fa-check"></i> Agregar</button>
+                            <button *ngIf="edit" type="submit" class="btn btn-success"><i class="fas fa-check"></i> Editar</button>
                             <button type="button" class="btn btn-danger" (click)="activeModal.close('Close click')"><i class="fas fa-times"></i>
                                 Cancelar</button>
                         </div>

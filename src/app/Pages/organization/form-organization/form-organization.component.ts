@@ -13,9 +13,11 @@ import swal from 'sweetalert2'
 })
 export class FormOrganizationComponent implements OnInit {
 
-  @Input() organizationBean: OrganizationBean;
+  @Input() organizationId: number; // id de organizacion - viene del listado de organizacion
   formRegisterOrganization: FormGroup;
   organization: OrganizationBean;
+  edit: boolean = false;
+  
 
   constructor(
     public activeModal: NgbActiveModal,
@@ -34,6 +36,14 @@ export class FormOrganizationComponent implements OnInit {
       managerEmail: new FormControl('', Validators.compose([Validators.required])),
       phone: new FormControl('', Validators.compose([Validators.required]))
     });
+
+    if (this.organizationId) {
+      this.getOrganization(this.organizationId);
+      this.edit = true;
+    }
+    else
+      this.edit = false;
+    
   }
 
   public save(formRegisterOrganization: any){
@@ -43,16 +53,16 @@ export class FormOrganizationComponent implements OnInit {
       this.organization.direction = formRegisterOrganization.value.direction;
       this.organization.phone = formRegisterOrganization.value.phone;
       this.organization.responsablePaymentName = formRegisterOrganization.value.managerName;
-      this.organization.responsablePaymentPhone = formRegisterOrganization.value.managerPhone;
       this.organization.responsablePaymentEmail = formRegisterOrganization.value.managerEmail;
+      this.organization.responsablePaymentPhone = formRegisterOrganization.value.managerPhone;
     
       this.sharedService.sendOrRecieveData('/oc/so', this.organization, true)
             .subscribe( resp => {
-              // Se registro la nueva org
+              // Se registro la nueva organizacion
               // Mensaje de confirmacion
               setTimeout(() => {
                     swal.fire(
-                      'Se ha registrado correctamente!',
+                      'Se ha guardado correctamente!',
                       'Con éxito!',
                       'success'
                       )
@@ -62,4 +72,18 @@ export class FormOrganizationComponent implements OnInit {
     }
   }
 
+  public getOrganization(organizationId: number){
+    this.organization.id = organizationId;
+    this.sharedService.sendOrRecieveData('/oc/gobi', this.organization, false)
+    .subscribe(resp=>{
+      this.organization = resp.data;
+      this.formRegisterOrganization.patchValue({nameOrganization: this.organization.name});
+      this.formRegisterOrganization.patchValue({ruc: this.organization.ruc});
+      this.formRegisterOrganization.patchValue({direction: this.organization.direction});
+      this.formRegisterOrganization.patchValue({managerName: this.organization.responsablePaymentName});
+      this.formRegisterOrganization.patchValue({managerPhone: this.organization.responsablePaymentPhone});
+      this.formRegisterOrganization.patchValue({managerEmail: this.organization.responsablePaymentEmail});
+      this.formRegisterOrganization.patchValue({phone: this.organization.phone});
+    })
+  }
 }

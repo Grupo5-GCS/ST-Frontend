@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import swal from 'sweetalert2'
 // Modelos
 import { OrganizationBean } from 'src/app/Beans/OrganizationBean';
 // Componentes
@@ -48,6 +49,33 @@ export class OrganizationListComponent implements OnInit {
     });
   }
 
+  
+
+  public deleteOrganization(organizationId: number) {
+    this.organizationBean.id = organizationId;
+    swal.fire({
+      title: '¿Seguro de eliminar?',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Sí',
+      cancelButtonText: 'No'
+    }).then(result => {
+      if(result.isConfirmed) {
+        this.sharedService.sendOrRecieveData('/oc/dobi', this.organizationBean, false)
+          .subscribe(resp => {
+            swal.fire(
+              'Producto eliminado correctamente!',
+              '',
+              'success'
+            )
+            this.getListOrganizations();
+          });
+      }
+    })
+  }
+
   public getListOrganizations() {
     if(this.authService.hasRole('Administrador')) {
       this.sharedService.sendOrRecieveData('/oc/gao', {}, false)
@@ -55,15 +83,5 @@ export class OrganizationListComponent implements OnInit {
         this.organizationsList = resp.datalist;
       });
     } 
-    // else {
-    //   let data = {};
-    //   this.sharedService.sendOrRecieveData('/pc/gpbup', data, false)
-    //   .subscribe(resp => {
-    //     this.organizationsList = resp.datalist;
-    //   });
-    // }
   }
-
-
-
 }
