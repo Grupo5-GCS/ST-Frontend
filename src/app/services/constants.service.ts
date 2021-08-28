@@ -23,4 +23,7 @@ export class ConstantsService {
 
   TYPE_DOCUMENT_DNI: string = '01';
 
+  STATUS_ACTIVATED: string = "1";
+  STATUS_DISABLED: string = "0";
+
 }

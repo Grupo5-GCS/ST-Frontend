@@ -3,9 +3,10 @@
         <div class="row">
             <div class="col-3 col-md-3 "></div>
             <div class="col-6 col-md-6 text-center">
-                <h2 class="tituloOrga">Mis Empresas</h2>
+                <h2 *ngIf="this.authService.hasRole('Administrador - Organizacion')" class="tituloOrga">Mis Empresas</h2>
+                <h2 *ngIf="this.authService.hasRole('Administrador')" class="tituloOrga">Empresas</h2>
             </div>
-            <div class="col-3 col-md-3 text-center"><button class="btn btn-success" (click)="openModal()"> <i class="fas fa-plus"></i> Agregar Empresa</button></div>
+            <div *ngIf="this.authService.hasRole('Administrador - Organizacion')" class="col-3 col-md-3 text-center"><button class="btn btn-success" (click)="openModal()"> <i class="fas fa-plus"></i> Agregar Empresa</button></div>
     
         </div>
     

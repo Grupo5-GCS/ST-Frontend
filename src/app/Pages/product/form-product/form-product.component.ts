@@ -26,7 +26,9 @@ export class FormProductComponent implements OnInit {
   urlImageSelected: any;
   listServiceSelected: Array<any> = [];
   listServices: Array<any> = [];
+  listServiceCodes: Array<any> = [];
   @Input() productId: number;
+  listTypeProduct: Array<String> = ['Hotel', 'Restaurante'];
   
   constructor(
     public activeModal: NgbActiveModal,
@@ -46,6 +48,7 @@ export class FormProductComponent implements OnInit {
       typeProduct: new FormControl('', Validators.compose([Validators.required])),
       description: new FormControl('', Validators.compose([Validators.required]))
     });
+    this.getAllServices();
     if(this.productId) {
       this.getProduct(this.productId);
       this.sharedService.getImageById('/pc/gi', this.productId)
@@ -63,6 +66,7 @@ export class FormProductComponent implements OnInit {
       this.productBean.type = formRegister.value.typeProduct;
       this.productBean.longDescription = formRegister.value.description;
       this.productBean.ubication = formRegister.value.ubication;
+      this.productBean.status = this.productBean.status != null ? this.productBean.status : this.constants.STATUS_DISABLED;
       if(this.selectedFiles != null) {
         this.currentFileUpload = this.selectedFiles.item(0)!;
       } else {
@@ -70,8 +74,8 @@ export class FormProductComponent implements OnInit {
       }
       if(this.listServiceSelected.length > 0) {
         let servicesCodes = '';
-        this.listServiceSelected.forEach(service => {
-          servicesCodes = servicesCodes + service.code.concat(',');
+        this.listServiceSelected.forEach(serviceCode => {
+          servicesCodes = servicesCodes + serviceCode.concat(',');
         });
         this.productBean.serviceId = servicesCodes.substring(0, servicesCodes.length-1);
       }
@@ -79,7 +83,7 @@ export class FormProductComponent implements OnInit {
       .subscribe(resp => {
         swal.fire(
           'Se ha registrado correctamente!',
-          'Con éxito!',
+          'Con éxito',
           'success'
           )
         });
@@ -92,25 +96,18 @@ export class FormProductComponent implements OnInit {
   public getProduct(productId: number) {
     let productBean = new ProductBean();
     productBean.id = productId;
-    this.listServiceSelected = [];
+    this.listServiceCodes = [];
     this.sharedService.sendOrRecieveData('/pc/gpbi', productBean, false)
     .subscribe(resp => {
       this.productBean = resp.data;
       this.formRegister.patchValue({name: this.productBean.name});
-      this.formRegister.patchValue({type: this.productBean.type});
+      this.formRegister.patchValue({typeProduct: this.productBean.type});
       this.formRegister.patchValue({ubication: this.productBean.ubication});
       this.formRegister.patchValue({description: this.productBean.longDescription});
 
       this.productBean.imagePath = resp.data.imagePath;
       if(this.productBean.serviceId != null) {
-        let listServiceCodes = this.productBean.serviceId.split(',');
-        this.listServices.forEach(service => {
-          for(let code of listServiceCodes) {
-            if(service.code == code) {
-              this.listServiceSelected.push(service);
-            }
-          }
-        });
+        this.listServiceCodes = this.productBean.serviceId.split(',');
       }
     });
   }
@@ -138,6 +135,23 @@ export class FormProductComponent implements OnInit {
       this.urlImageSelected = e.target!.result;
     };
     this.imagenEstado = false
+  }
+
+  public selectService(e: any) {
+    let codeServiceSelected = e.target.value;
+    if(e.target.checked) {
+      if(codeServiceSelected != null) {
+        this.listServiceSelected.push(codeServiceSelected);
+      }
+    } else {
+      let pos = 0;
+      this.listServiceSelected.forEach(codeService => {
+        if(codeService == codeServiceSelected) {
+          this.listServiceSelected.splice(pos, 1);
+        }
+        pos++;
+      });
+    }
   }
 
 }

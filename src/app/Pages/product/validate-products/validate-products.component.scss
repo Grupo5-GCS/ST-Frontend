@@ -87,8 +87,19 @@
     height: 180px;
 }
 
-.btn {
+/* .btn {
     height: 50px;
     border-radius: 15px;
     width: 50px;
+} */
+.headerTabla{
+    background-color: var(--color-navbar);
+    padding: 30px 0 30px 0;
+  }
+  
+.inputHeaderTabla{
+margin-right: 30px;
+}
+.headerTabla .mostrar {
+padding-left: 40px !important;
 } 

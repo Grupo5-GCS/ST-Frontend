@@ -42,6 +42,7 @@ export class ProductsListComponent implements OnInit {
   }
 
   public getListProducts() {
+    this.productsList = [];
     if(this.authService.hasRole('Administrador')) {
       this.sharedService.sendOrRecieveData('/pc/gap', {}, false)
       .subscribe(resp => {
@@ -72,7 +73,7 @@ export class ProductsListComponent implements OnInit {
         this.sharedService.sendOrRecieveData('/pc/dp', producSelected, false)
           .subscribe(resp => {
             swal.fire(
-              'Producto eliminado correctamente!',
+              'Empresa eliminado correctamente!',
               '',
               'success'
             )
