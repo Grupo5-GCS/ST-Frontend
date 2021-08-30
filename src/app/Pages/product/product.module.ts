@@ -9,12 +9,14 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { ProductsListComponent } from './products-list/products-list.component';
 import { ResultProductsComponent } from './result-products/result-products.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ListHotelComponent } from './type/list-hotel/list-hotel.component';
+import { ListRestaurantComponent } from './type/list-restaurant/list-restaurant.component';
 
 
 @NgModule({
   declarations: [
     ValidateProductsComponent, FormProductComponent, ProductDetailComponent, ProductsListComponent,
-    ResultProductsComponent
+    ResultProductsComponent, ListHotelComponent, ListRestaurantComponent
   ],
   imports: [
     CommonModule,
