@@ -1,11 +1,11 @@
-<section id="cards" class="mt-4 ">
+<section id="cards" class="mt-4 animated fadeIn">
     <div class="container">
         <div class="row mb-5">
             <div class="col-md-4 mb-4">
-                <div class="card shadow">
-                    <img class="card-img-top" src="https://digital.ihg.com/is/image/ihg/crowne-plaza-lima-5900996795-4x3?qlt=85,0&resMode=sharp2&op_usm=1.75,0.9,2,0" alt="Card image cap">
+                <div class="card shadow animated fadeIn">
+                    <img class="card-img-top" [src]="productBean.imageFile">
                     <div class="card-body">
-                        <h6 class="name">Hotel Sheraton</h6>
+                        <h6 class="name font-weight-bold">{{productBean.name}}</h6>
                     </div>
                 </div>
             </div>
@@ -26,12 +26,10 @@
                                     <a><i class="fas fa-star-half-alt"></i></a>
                                 </div>
                                 <div class="from">Desde</div>
-                                <h4 class="price">S/ 250</h4>
+                                <h4 class="price">S/ {{productBean.price}}</h4>
                                 <p class="night">por noche</p>
                             </div>
-                            <div class="info-detail">
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores quisquam at dolores eveniet, laboriosam nobis. Iste, necessitatibus, facilis laudantium odio, quae voluptate numquam eum quia minus blanditiis quaerat ut quasi.
-                            </div>
+                            <div class="info-detail">{{productBean.longDescription}}</div>
                         </div>
                     </div>
                 </div>
@@ -39,11 +37,11 @@
         </div>
         <!-------------------- Comentarios-------------------->
         <h5 class="card-title mb-4">Comentarios</h5>
-        <div class="row mb-4">
+        <div class="row mb-4" *ngFor="let comment of listCommentaries">
             <div class="col-md-12 mb-4">
                 <div class="card shadow">
                     <div class="wrap-title group-start">
-                        <h6 class="card-title">Nombre</h6>
+                        <h6 class="card-title">{{comment.username}}</h6>
                         <div>
                             <div class="starts">
                                 <a><i class="fas fa-star"></i></a>
@@ -55,44 +53,19 @@
                         </div>
                     </div>
                     <div class="wrap-coment">
-                        <p class="coment">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est, perspiciatis. Earum porro nesciunt, similique, molestias unde iure harum eligendi minima soluta quasi odio saepe, quos a nulla id! Illo, unde.
-                        </p>
+                        <p class="coment">{{comment.description}}</p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row mb-4">
-            <div class="col-md-12 mb-4">
-                <div class="card shadow">
-                    <div class="wrap-title group-start">
-                        <h6 class="card-title">Nombre</h6>
-                        <div>
-                            <div class="starts">
-                                <a><i class="fas fa-star"></i></a>
-                                <a><i class="fas fa-star"></i></a>
-                                <a><i class="fas fa-star"></i></a>
-                                <a><i class="fas fa-star-half-alt"></i></a>
-                                <a><i class="far fa-star"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="wrap-coment">
-                        <p class="coment">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est, perspiciatis. Earum porro nesciunt, similique, molestias unde iure harum eligendi minima soluta quasi odio saepe, quos a nulla id! Illo, unde.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <a href="" class="show-more">Ver más...</a>
+        <!-- <a href="" class="show-more">Ver más...</a> -->
 
         <div class="row mb-4 mt-4">
             <div class="col-md-12 mb-4">
                 <div class="card shadow">
-                    <form action="">
+                    <form [formGroup]="formCommentary" (ngSubmit)="saveCommentary()" novalidate>
                         <div class="wrap-send-coment">
-                            <input type="text" class="send-coment" placeholder="Escribir un comentario">
+                            <input type="text" formControlName="commentary" class="send-coment" placeholder="Escribir un comentario">
                         </div>
                         <div class="wrap-send-score">
                             <div class="send-score">

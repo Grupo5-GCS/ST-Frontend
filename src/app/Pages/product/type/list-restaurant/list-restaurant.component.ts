@@ -16,7 +16,7 @@ export class ListRestaurantComponent implements OnInit {
   productBean: ProductBean;
   listRestaurants: Array<ProductBean> = [];
   formSearch: FormGroup;
-  currentRate = 3.5;
+  currentRate = 4.5;
 
   constructor(
     private sharedService: SharedService,
@@ -48,13 +48,13 @@ export class ListRestaurantComponent implements OnInit {
 
   public sendNameProduct() {
     if(this.formSearch.value.productName != '') {
-      this.router.navigate(['/pr/gpd', this.formSearch.value]);
+      this.router.navigate(['/pr/search', this.formSearch.value.productName]);
       this.formSearch.patchValue({productName: ''});
     }
   }
 
   public getProductId(productId: number) {
-    this.router.navigate(['/pr/icp', productId]);
+    this.router.navigate(['/pr/product-detail', productId]);
   }
 
 }
